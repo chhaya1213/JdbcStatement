@@ -125,7 +125,7 @@ public class PreparedStatement {
 			
 			Statement s = c.createStatement();
 			
-			ResultSet rs = s.executeQuery("select * from student");
+			ResultSet rs = s.executeQuery("select * from student11");
 			
 
 			int i = s.executeUpdate(sql);
