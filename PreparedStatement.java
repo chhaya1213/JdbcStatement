@@ -27,8 +27,12 @@ public class PreparedStatement {
 			
 			System.out.println("Enter Your City:");
 			String city = sc.next();
+
+			System.out.println("Enter your age:");
+			int age=sc.nextInt();
 			
-			String sql = "INSERT INTO student (sid,sname,city) VALUES (" + id + ", '" + name + "', '" + city + "')";
+			
+			String sql = "INSERT INTO student (sid,sname,city) VALUES (" + id + ", '" + name + "', '" + city + "'+age+");
 
 			int i = s.executeUpdate(sql);
 			
@@ -62,6 +66,9 @@ public class PreparedStatement {
 			
 			System.out.println("Enter Your ID :");
 			int id = sc.nextInt();
+
+			System.out.println("Enter your age:");
+			int age=sc.nextInt();
 			
 			
 			String sql = "UPDATE student SET name = '" + name + "', city = '" + city + "' WHERE id = " + id;
@@ -93,6 +100,9 @@ public class PreparedStatement {
 			System.out.println("Enter Your ID :");
 			int id = sc.nextInt();
 			
+			System.out.println("Enter your age:");
+			int age=sc.nextInt();
+			
 			String sql = "DELETE FROM student  WHERE id = " + id;
 			
 			int i = s.executeUpdate(sql);
@@ -118,14 +128,15 @@ public class PreparedStatement {
 			ResultSet rs = s.executeQuery("select * from student");
 			
 
-//			int i = s.executeUpdate(sql);
+			int i = s.executeUpdate(sql);
 			while(rs.next()) {
 				
 				int id =rs.getInt(1);
 				String name=rs.getString(2);
 				String city=rs.getString(3);
+				int age=rs.getInt(4);
 				
-				System.out.println(" ID:"+id+" Name:"+name+" City:"+city);
+				System.out.println(" ID:"+id+" Name:"+name+" City:"+city+"age:"+age);
 			}
 		}
 		catch(Exception e )
