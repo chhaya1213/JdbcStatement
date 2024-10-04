@@ -13,7 +13,7 @@ public class PreparedStatement {
 		{
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			
-			Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo1184","root","Rohu@3601");
+			Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo1184","root","root");
 			
 			Statement s = c.createStatement();
 			
@@ -48,7 +48,7 @@ public class PreparedStatement {
 		{
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			
-			Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo1184","root","Rohu@3601");
+			Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo1184","root","root");
 			
 			Statement s = c.createStatement();
 			
@@ -84,7 +84,7 @@ public class PreparedStatement {
 		{
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			
-			Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo1184","root","Rohu@3601");
+			Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo1184","root","root");
 			
 			Statement s = c.createStatement();
 			
@@ -111,7 +111,7 @@ public class PreparedStatement {
 		{
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			
-			Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo1184","root","Rohu@3601");
+			Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo1184","root","root");
 			
 			Statement s = c.createStatement();
 			
