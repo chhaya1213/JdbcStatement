@@ -13,7 +13,7 @@ public class StatmentDemo {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection c =DriverManager.getConnection("jdbc:mysql://localhost:3306/demo1184","root","root");
 			Statement s=c.createStatement();
-			s.executeUpdate("insert into student(id,name,city) values(112,'rajesh',Amravati)");
+			s.executeUpdate("insert into student(id,name,city,age) values(112,'rajesh',Amravati,23)");
 			System.out.println("data inserted");
 			
 		}
@@ -30,7 +30,7 @@ public class StatmentDemo {
 		try 
 		{
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo1184","root","Rohu@3601");
+			Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo1184","root","root");
 			Statement s=c.createStatement();
 			s.executeUpdate("update student set name = 'Laxmi' where id = 101");
 			System.out.println("DATA UPATED.");
@@ -50,7 +50,7 @@ public class StatmentDemo {
 		try 
 		{
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo1184","root","Rohu@3601");			Statement s=c.createStatement();
+			Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo1184","root","root");			Statement s=c.createStatement();
 			Statement S=c.createStatement();
 			S.executeUpdate("delete from student where id = 101");
 			System.out.println("Data Deleted");
@@ -69,16 +69,17 @@ public class StatmentDemo {
 		try 
 		{
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo1184","root","Rohu@3601");
+			Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo1184","root","root");
 			Statement s=c.createStatement();
-			ResultSet rs = s.executeQuery("select * from student");
+			ResultSet rs = s.executeQuery("select * from student11");
 			
 			while(rs.next()) 
 			{
 				int id =rs.getInt(1);
 				String name= rs.getString(2);
 				String city = rs.getString(3);	
-				System.out.println("sid:"+id+"\nsName:"+name+"\nCity:"+city);
+				int age=rs.getInt(4);
+				System.out.println("sid:"+id+"\nsName:"+name+"\nCity:"+city+"\nage:"+age);
 			}
 			
 		}
