@@ -79,7 +79,7 @@ public class StatmentDemo {
 				String name= rs.getString(2);
 				String city = rs.getString(3);	
 				int age=rs.getInt(4);
-				System.out.println("sid:"+id+"\nsName:"+name+"\nCity:"+city+"\nage:"+age);
+				System.out.println("sid:"+id+"\nsName:"+name+"\nCity:"+city+"\nAge:"+age);
 			}
 			
 		}
